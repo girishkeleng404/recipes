@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <form method="post" id="myRecipe">
+
+            <label for="recipes">Recipes:</label>
+            <input type="text" name="recipes" id="recipeInput">
+            <input type="submit" value="GET" id="get" formaction="/get_recipe">
+
+        </form>
+
+
+        <form action="" method="post" id="myRecipeid">
+
+            <label for="information">Id:</label>
+            <input type="text" name="information" id="recipeIngri">
+            <input type="submit" name="" value="GET" id="get2" formaction="/get_information" placeholder="782585">
+        </form>
+
+
+        <% if(locals.check){   %>
+        <ul>  
+        <%  content.results.forEach(recipe=> { %>
+
+            <li>
+                <li> id: <%= recipe.id %> </li>
+                <li> <%= recipe.title %>  </li>
+                <li><img src="  <%=recipe.image %> "> </li>
+               
+            </li>
+            <% }) %>
+        </ul>
+        <% } else{  %>
+        <%}  %>
+
+
+
+        <% if(locals.check2){  %>
+
+        <!-- <%= locals.data %> -->
+        <!-- <% const veg = Object.values(data.creditsText) %> -->
+          <!-- <li> Credits : <%= veg %> </li> -->
+
+<li> Vegetarian : <%= data.vegetarian %>  </li>
+<li>Vegan : <%= data.vegan %></li>
+<li> GlutenFree : <%= data.glutenFree %></li>
+<li> WeightWatcherSmartPoints : <%= data.weightWatcherSmartPoints %></li>
+<li> HealthScore : <%= data.healthScore %></li>
+
+
+<li>ExtendedIngredients : <%= data.extendedIngredients.id %></li>
+
+    <% data.extendedIngredients.forEach(Ingredients=> { %>
+   
+        <li>
+            <li> Id : <%= Ingredients.id %> </li>
+            <li> Aisle : <%= Ingredients.aisle %> </li>
+            <li>  Name : <%= Ingredients.name %>  </li>
+            <li>  Original : <%= Ingredients.original %>  </li>
+            <li>  Unit : <%= Ingredients.unit %>  </li>
+            
+           
+        </li>
+
+ <%   })   %>
+
+
+
+
+       
+            
+
+        <% } else{  %>
+
+            <% } %>
+
+    </div>
+    
+</body>
+</html>
