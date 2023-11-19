@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 const API1 = "https://api.spoonacular.com/recipes/complexSearch?" ;
 const API2 = "https://api.spoonacular.com/recipes/";
-const API2_1 = "/information?includeNutrition=false"
+const API2_1 = "/information?includeNutrition=true"
 
 const config ={
     headers: {
@@ -31,10 +31,10 @@ app.post('/get_recipe', async(req, res)=>{
     check= true;
     
     try{
-        const result = await axios.get(API1+"query="+ req.body.recipes,config);
+        const result = await axios.get(API1+"query="+ req.body.recipes+ "&cuisine="+ req.body.cuisine+ "&includeIngredients="+req.body.includeIngredients+ "&excludeIngredients="+req.body.excludeIngredients ,config);
         
         res.render("index.ejs", {content: result.data, check:check});
-        console.log(result.data);
+        // console.log(result.data);
         console.log(ll);
     } catch(error){
 
