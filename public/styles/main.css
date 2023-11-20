@@ -67,6 +67,15 @@ overflow: hidden;
 
 }
 
+
+.ul1{
+    display: flex;
+    justify-self: center;
+    flex-wrap: wrap;
+    align-items: center;
+    /* width: 100%; */
+    /* width: 25%; */
+}
 .ul{
     width: 25%;
     /* background-color: rgb(95, 148, 195); */
@@ -80,3 +89,75 @@ overflow: hidden;
         margin: 7px 7px 7px 0 ;
     }
 }
+
+@media screen and (min-width: 763px) {
+  
+  
+  }
+
+  @media (max-width: 768px) {
+
+   #myRecipe{
+    display: flex;
+    /* height: 50vh; */
+    height: auto;
+
+  
+   /* background-color: aquamarine; */
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    }
+
+    .indiv{
+        margin: 10px;
+        align-self: center;
+
+        
+    }
+    .indiv label{
+        width: 180px;
+    }
+    .search{
+        
+        height: auto;
+        background-size: cover;
+        
+    }
+
+    #myRecipeId{
+        display: flex;
+        height: auto;
+        /* align-items: center; */
+        /* justify-content: center; */
+        overflow: hidden;
+        flex-direction: column;
+        }
+
+
+        .show{
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .ul1{
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+        }
+        .ul{
+            width: 100%;
+            /* background-color: rgb(95, 148, 195); */
+            margin: 20px;
+            padding: 20px;
+        
+            li{
+                list-style: none;
+                text-decoration: none;
+                font-size: 1.1rem;
+                margin: 7px 7px 7px 0 ;
+            }
+        }
+
+  }

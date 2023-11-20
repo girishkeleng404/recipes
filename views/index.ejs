@@ -14,19 +14,26 @@
         
         <form action="" method="post" id="myRecipe">
 
+
+
+            <div class="indiv"> 
             <label for="recipes">Recipes:</label>
             <input type="text" name="recipes" id="recipeInput">
+        </div>
+        <div class="indiv">
             <label for="cuisine">Cuisine : </label>
-            <input type="text" name="cuisine" id="cuisine" placeholder="ex:indian">
-            <div> 
+            <input type="text" name="cuisine" id="cuisine" placeholder="ex:indian"> 
+        </div>
+            <div class="indiv"> 
             <label for="includeIngredients">IncludeIngredients : </label>
             <input type="text" name="includeIngredients" id="includeIngredients">
         </div>
-       <div> 
+       <div class="indiv"> 
             <label for="excludeIngredients">ExcludeIngredients : </label>
             <input type="text" name="excludeIngredients" id="excludeIngredients">
         </div>
-            <input type="submit" value="GET" id="get" class="button1" formaction="/get_recipe">
+        <div class="indiv"> 
+            <input type="submit" value="GET" id="get" class="button1" formaction="/get_recipe"></div>
 </form>
         
         
@@ -47,7 +54,7 @@
 <div class="show"> 
         <% if(locals.check){   %>
         
-            
+            <div class="ul1"> 
         <%  content.results.forEach(recipe=> { %>
             
             <ul class="ul">
@@ -55,7 +62,7 @@
                 <li> <%= recipe.title %>  </li>
                 <img src="  <%=recipe.image %> "> 
             </ul>
-            <% }) %> 
+            <% }) %> </div>
          
         <% } else{  %>
         <%}  %>
