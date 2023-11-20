@@ -73,7 +73,9 @@
 
         <% if(locals.check2){  %>
 
+<div class="main"> 
 
+<div class="first">  
   <h2> <%= data.title %> </h2>
 
   <li><img src="  <%=data.image %> "> </li>
@@ -84,42 +86,55 @@
 <li> WeightWatcherSmartPoints : <%= data.weightWatcherSmartPoints %></li>
 <li> HealthScore : <%= data.healthScore %></li>
 
+</div>
 
+<div class="second"> 
 <li><h2>ExtendedIngredients :</h2>  <%= data.extendedIngredients.id %></li>
-
+ <ul> 
     <% data.extendedIngredients.forEach(Ingredients=> { %>
-        <ul>
+       <div class="inside"> 
             <li> Id : <%= Ingredients.id %> </li>
             <li> Aisle : <%= Ingredients.aisle %> </li>
             <li>  Name : <%= Ingredients.name %>  </li>
             <li>  Original : <%= Ingredients.original %>  </li>
             <li>  Unit : <%= Ingredients.unit %>  </li>   
-        </ul>
+       </div>
  <%   })   %>
-
-
+ </ul>
+</div>
+<div class="third"> 
  <li> <h2>Summary :</h2> <%= data.summary %>  </li>
-
+</div>
+</div>
+<div class="main_sm"> 
+<div class="fourth"> 
  <h2>Steps:</h2>
+
  <% data.analyzedInstructions.forEach(Inst=>{   %>
     <% Inst.steps.forEach(InstInside=>{ %>
+<ul>  
         <li> Step <%= InstInside.number %> :   <%= InstInside.step %> </li>
+</ul>
+
      <% }) %>
     <% }) %>
 
+</div>
 
-
+<div class="fifth"> 
 <h2>nutrition values:</h2>
+<ul> 
     <% data.nutrition.nutrients.forEach(nutriVal=>{ %>
-        
+        <div class="inside">
         <li>Name : <%= nutriVal.name %> </li>
         <li>Amount : <%= nutriVal.amount %> </li>
         <li>Unit : <%= nutriVal.unit %> </li>
-        <li>PercentOfDailyNeeds : <%= nutriVal.percentOfDailyNeeds %> </li>
+        <li>PercentOfDailyNeeds : <%= nutriVal.percentOfDailyNeeds %> </li> 
+    </div>
  <%  })  %>
-
-       
-            
+ </ul>
+</div>
+</div>      
         <% } else{  %>
 
 
