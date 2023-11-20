@@ -11,49 +11,56 @@
     <div class="container">
         <div class="search"> 
 
-        <form method="post" id="myRecipe">
+        
+        <form action="" method="post" id="myRecipe">
 
             <label for="recipes">Recipes:</label>
             <input type="text" name="recipes" id="recipeInput">
             <label for="cuisine">Cuisine : </label>
             <input type="text" name="cuisine" id="cuisine" placeholder="ex:indian">
+            <div> 
             <label for="includeIngredients">IncludeIngredients : </label>
             <input type="text" name="includeIngredients" id="includeIngredients">
+        </div>
+       <div> 
             <label for="excludeIngredients">ExcludeIngredients : </label>
             <input type="text" name="excludeIngredients" id="excludeIngredients">
-            <input type="submit" value="GET" id="get" formaction="/get_recipe">
-
-        </form>
-
+        </div>
+            <input type="submit" value="GET" id="get" class="button1" formaction="/get_recipe">
+</form>
+        
+        
 
 
 
         <form action="" method="post" id="myRecipeId">
 
-            <label for="information">Id:</label>
+            <label for="information"> Recipe Id:</label>
             <input type="text" name="information" id="recipeIngri">
-            <input type="submit" name="" value="GET" id="get2" formaction="/get_information" placeholder="782585">
+            <input type="submit" name="" value="GET" id="get2" formaction="/get_information" placeholder="782585" class="button1">
         </form>
 
-    </div>
+    
+</div>
 
         <!-- -----------------------xxxxxx-------------------- -->
-
+<div class="show"> 
         <% if(locals.check){   %>
-        <ul>  
+        
             
         <%  content.results.forEach(recipe=> { %>
-            <ul>
-                <li> id: <%= recipe.id %> </li>
+            
+            <ul class="ul">
+                <li>Recipe Id: <%= recipe.id %> </li>
                 <li> <%= recipe.title %>  </li>
                 <img src="  <%=recipe.image %> "> 
             </ul>
-            <% }) %>
-        </ul>
+            <% }) %> 
+         
         <% } else{  %>
         <%}  %>
 
-
+</div>
           <!-- --------------XXXXXX-------------- -->
 
 
