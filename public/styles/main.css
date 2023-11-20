@@ -2,3 +2,90 @@
     margin: 0;
     padding: 0;
 }
+.search{
+    background-image: url(../images/img1.jpg);
+    height: 50vh;
+    background-size: cover;
+    
+}
+label{
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+input{
+    min-width: 250px;
+    
+    height: 30px;
+    font-size: 1.1rem;
+    border: none;
+    list-style: none;
+    border-radius: 2px;
+    outline: none;
+    padding: 2px 6px;
+}
+#myRecipe{
+  display: flex;
+  height: 25vh;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.button1{
+     background-color: rgb(181, 142, 68);
+    cursor: pointer;
+    color: rgb(241, 241, 241);
+    margin: 30px;
+    padding: 20px;
+ height: auto;
+ opacity: 0.8;
+    text-align: center;
+}
+#get2{
+    background-color: aqua;
+}
+#myRecipeId{
+display: flex;
+height: 30vh;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+}
+.show{
+    display: flex;
+    justify-content: center; 
+     align-items: center;
+    width: 100vw;
+    flex-wrap: wrap;
+    /* display: grid;
+    column-gap: 50px;
+    row-gap: 50px; */
+ 
+    
+
+}
+
+
+.ul1{
+    display: flex;
+    justify-self: center;
+    flex-wrap: wrap;
+    align-items: center;
+    /* width: 100%; */
+    /* width: 25%; */
+}
+.ul{
+    width: 25%;
+    /* background-color: rgb(95, 148, 195); */
+    margin: 20px;
+    padding: 20px;
+
+    li{
+        list-style: none;
+        text-decoration: none;
+        font-size: 1.1rem;
+        margin: 7px 7px 7px 0 ;
+    }
+}
