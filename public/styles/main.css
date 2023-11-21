@@ -75,12 +75,7 @@ overflow: hidden;
      align-items: center;
     width: 100vw;
     flex-wrap: wrap;
-    /* display: grid;
-    column-gap: 50px;
-    row-gap: 50px; */
- 
     
-
 }
 
 
@@ -89,12 +84,10 @@ overflow: hidden;
     justify-self: center;
     flex-wrap: wrap;
     align-items: center;
-    /* width: 100%; */
-    /* width: 25%; */
+    
 }
 .ul{
     width: 20%;
-    /* background-color: rgb(95, 148, 195); */
     margin: 20px;
     padding: 20px;
 
@@ -103,8 +96,19 @@ overflow: hidden;
         text-decoration: none;
         font-size: 1.1rem;
         margin: 7px 7px 7px 0 ;
+        
+        
     }
+    img{
+        transition: 250ms ease-in;
+        }
+        img:hover{
+            box-shadow: 10px 10px 8px #888888;
+        }
 }
+
+
+
 
 .indiv{
     font-weight: bold;
@@ -114,23 +118,18 @@ overflow: hidden;
     color:white;
 }
 
-@media screen and (min-width: 763px) {
 
 
-}
+
+
 
 @media (max-width: 768px) {
 
  #myRecipe{
-  display: flex;
-  /* height: 50vh; */
+ 
   height: auto;
-
-
- /* background-color: aquamarine; */
   flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
+ 
   }
 
   .indiv{
@@ -146,38 +145,22 @@ overflow: hidden;
 
       height: auto;
       background-size: cover;
-      display: flex;
       flex-direction: column;
-
   }
 
   #myRecipeId{
-      display: flex;
       height: auto;
-      /* align-items: center; */
-      /* justify-content: center; */
-      overflow: hidden;
       flex-direction: column;
       }
-
-
       .show{
-          display: flex;
           flex-direction: column;
-
       }
-
       .ul1{
-       display: flex;
        justify-content: center;
        flex-direction: column;
       }
       .ul{
           width: 100%;
-          /* background-color: rgb(95, 148, 195); */
-          margin: 20px;
-          padding: 20px;
-
           li{
               list-style: none;
               text-decoration: none;
@@ -185,17 +168,17 @@ overflow: hidden;
               margin: 7px 7px 7px 0 ;
           }
       }
-
 }
-
-
 .main{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+   
     flex-wrap: wrap;
     margin-top: 50px;
 }
+
+
+
 
 li{
     list-style: none;
@@ -206,19 +189,16 @@ h2{
 }
 .first{
     width: 30%;
+    overflow: hidden;
 }
 .second{
     width: 35%;
     text-align: center;
-
     ul{
-        /* margin: 20px; */
         display: flex;
-        /* flex-direction: column; */
         flex-wrap: wrap;
         justify-content: center;
         text-align: left;
-
         .inside{
             width: 40%;
             margin: 10px;
@@ -234,7 +214,6 @@ h2{
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 10rem;
-    /* width: 100vw; */
 }
 .fourth{
     width: 48%;
@@ -247,13 +226,8 @@ h2{
 .fifth{
     width: 48%;
     text-align: center;
-
-
-
     ul{
-        /* margin: 20px; */
         display: flex;
-        /* flex-direction: column; */
         flex-wrap: wrap;
         justify-content: center;
         text-align: left;
@@ -263,7 +237,6 @@ h2{
             margin: 10px;
         }
     }
-
 }
 .copyBtn{
     background-color: transparent;
@@ -275,46 +248,33 @@ h2{
     margin-left: 9px;
   transition: all 250ms ease-in-out;
 
-   
 }
 
  .copyBtn:hover{
         background-color:rgb(33, 148, 154);
         color: #fff;
+        scale: 1.05;
+        box-shadow: 10px 10px 8px #888888;
     }
-
 
     @media (max-width: 868px){
         .main{
-            display: flex;
+          
             flex-direction: column;
         }
-
         .first, .second, .third, .fourth, .fifth{
            width: 100%; 
            text-align: center;
         }
         .main_sm{
-            display: flex;
+            
             flex-direction: column;
             text-align: left;
-
-
-
             ul{
-                /* margin: 20px; */
-                display: flex;
-                /* flex-direction: column; */
-                flex-wrap: wrap;
-                /* justify-content: center; */
-                text-align: left;
                 margin-top: 40px;
-                /* font-size: 18px; */
-        
                 .inside{
                     width: 40%;
                     margin: 10px;
-                  
 
                     li{
                          font-size: 16px; 
@@ -323,3 +283,5 @@ h2{
             }
         }
     }
+
+   

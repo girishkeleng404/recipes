@@ -15,7 +15,7 @@
 
             <div class="indiv"> 
             <label for="recipes">Recipes:</label>
-            <input type="text" name="recipes" id="recipeInput">
+            <input type="text" name="recipes" id="recipeInput" placeholder="Ex: pasta,pizza">
         </div>
         <div class="indiv"> 
             <label for="cuisine">Cuisine : </label>
@@ -23,11 +23,11 @@
         </div>
         <div class="indiv"> 
             <label for="includeIngredients">IncludeIngredients : </label>
-            <input type="text" name="includeIngredients" id="includeIngredients">
+            <input type="text" name="includeIngredients" id="includeIngredients" placeholder="cheese">
         </div>
         <div class="indiv"> 
             <label for="excludeIngredients">ExcludeIngredients : </label>
-            <input type="text" name="excludeIngredients" id="excludeIngredients">
+            <input type="text" name="excludeIngredients" id="excludeIngredients" placeholder="mushroom">
         </div>
             <input type="submit" value="GET" id="get" formaction="/get_recipe">
 
@@ -57,7 +57,7 @@
 
 
                 <li>
-                    <%= recipe.id %>
+                     Id :  <%= recipe.id %>
                     <button onclick="copyText('<%= recipe.id %>')" class="copyBtn" >Copy</button>
                   </li>
                 <!-- <li> id: <%= recipe.id %> </li> -->
