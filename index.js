@@ -19,6 +19,14 @@ const config ={
     },
 }
 
+const values =[
+    'value 1',
+    'value 2',
+    'value 3',
+    'value 4',
+     'value 5',
+]
+
 app.get('/', (req,res)=>{
     res.render("index.ejs", {content: "kkkkkkkkkkkkkkkkkkkkkk"});
 
@@ -33,7 +41,7 @@ app.post('/get_recipe', async(req, res)=>{
     try{
         const result = await axios.get(API1+"query="+ req.body.recipes+ "&cuisine="+ req.body.cuisine+ "&includeIngredients="+req.body.includeIngredients+ "&excludeIngredients="+req.body.excludeIngredients ,config);
         
-        res.render("index.ejs", {content: result.data, check:check});
+        res.render("index.ejs", {content: result.data, check:check, values:values});
         // console.log(result.data);
         console.log(ll);
     } catch(error){

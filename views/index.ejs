@@ -39,13 +39,13 @@
 
         <form action="" method="post" id="myRecipeId">
 
-            <label for="information"> Recipe Id:</label>
-            <input type="text" name="information" id="recipeIngri">
+            <label for="information" class="indiv2"> Recipe Id:</label>
+            <input type="text" name="information" id="recipeIngri" placeholder="Paste Id">
             <input type="submit" name="" value="GET" id="get2" formaction="/get_information" placeholder="782585" class="button1">
         </form>
     </div>
     
-</div>
+
 
         <!-- -----------------------xxxxxx-------------------- -->
 <div class="show"> 
@@ -54,12 +54,24 @@
             
         <%  content.results.forEach(recipe=> { %>
             <ul class="ul">
-                <li> id: <%= recipe.id %> </li>
+
+
+                <li>
+                    <%= recipe.id %>
+                    <button onclick="copyText('<%= recipe.id %>')" class="copyBtn" >Copy</button>
+                  </li>
+                <!-- <li> id: <%= recipe.id %> </li> -->
                 <li> <%= recipe.title %>  </li>
                 <img src="  <%=recipe.image %> "> 
             </ul>
             <% }) %>
         </ul>
+
+
+
+
+        
+
         <% } else{  %>
         <%}  %>
 
@@ -96,7 +108,7 @@
  <ul> 
     <% data.extendedIngredients.forEach(Ingredients=> { %>
        <div class="inside"> 
-            <li> Id : <%= Ingredients.id %> </li>
+            <!-- <li> Id : <%= Ingredients.id %> </li> -->
             <li> Aisle : <%= Ingredients.aisle %> </li>
             <li>  Name : <%= Ingredients.name %>  </li>
             <li>  Original : <%= Ingredients.original %>  </li>
@@ -138,6 +150,17 @@
  </ul>
 </div>
 </div>      
+
+
+
+
+
+
+
+
+
+
+
         <% } else{  %>
 
 
@@ -145,10 +168,22 @@
 
     </div>
    
+
+
+
     
-
-
-
+  
+    <script>
+      function copyText(text) {
+        const el = document.createElement('textarea');
+        el.value = text;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        alert('Copied to clipboard: ' + text);
+      }
+    </script>
     
 
 </body>

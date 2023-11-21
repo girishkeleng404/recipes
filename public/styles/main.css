@@ -50,8 +50,17 @@ input{
     cursor: pointer;
 }
 #get2{
-    background-color: aqua;
+    background-color: transparent;
     cursor: pointer;
+    transition: all 250ms ;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+#get2:hover{
+    background-color:black;
+    opacity: 0.5;
+    color: #fff;
 }
 #myRecipeId{
 display: flex;
@@ -95,6 +104,14 @@ overflow: hidden;
         font-size: 1.1rem;
         margin: 7px 7px 7px 0 ;
     }
+}
+
+.indiv{
+    font-weight: bold;
+}
+.indiv2{
+    font-weight: bold;
+    color:white;
 }
 
 @media screen and (min-width: 763px) {
@@ -248,3 +265,61 @@ h2{
     }
 
 }
+.copyBtn{
+    background-color: transparent;
+    outline: none;
+    padding: 2px 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid black;
+    margin-left: 9px;
+  transition: all 250ms ease-in-out;
+
+   
+}
+
+ .copyBtn:hover{
+        background-color:rgb(33, 148, 154);
+        color: #fff;
+    }
+
+
+    @media (max-width: 868px){
+        .main{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .first, .second, .third, .fourth, .fifth{
+           width: 100%; 
+           text-align: center;
+        }
+        .main_sm{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+
+
+
+            ul{
+                /* margin: 20px; */
+                display: flex;
+                /* flex-direction: column; */
+                flex-wrap: wrap;
+                /* justify-content: center; */
+                text-align: left;
+                margin-top: 40px;
+                /* font-size: 18px; */
+        
+                .inside{
+                    width: 40%;
+                    margin: 10px;
+                  
+
+                    li{
+                         font-size: 16px; 
+                    }
+                }
+            }
+        }
+    }
