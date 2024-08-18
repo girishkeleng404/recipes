@@ -9,7 +9,11 @@
 <body>
 
     <div class="container">
-        <div class="search"> 
+
+    
+
+        <div class="search">
+              
 
         <form method="post" id="myRecipe">
 
@@ -48,6 +52,19 @@
 
 
         <!-- -----------------------xxxxxx-------------------- -->
+
+
+
+
+        
+    
+
+
+
+
+
+
+
 <div class="show"> 
         <% if(locals.check){   %>
         <ul class="ul1">  
@@ -95,10 +112,8 @@
 <li> HealthScore : <%= data.healthScore %></li>
 
 
-   <h2>WinePairing : </h2>
-    <% data.winePairing.pairedWines.forEach(wine=>{  %>
-     <li>  <%= wine %>, </li>
-<%  }) %>
+   <!-- <h2>WinePairing : </h2> -->
+    
 
 
 </div>
@@ -118,7 +133,7 @@
  </ul>
 </div>
 <div class="third"> 
- <li> <h2>Summary :</h2> <%= data.summary %>  </li>
+ <li> <h2>Summary :</h2> <%- data.summary %>  </li>
 </div>
 </div>
 <div class="main_sm"> 

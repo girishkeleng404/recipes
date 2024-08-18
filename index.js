@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { response } from 'express';
 import bodyParser from 'body-parser';
 import axios from 'axios';
 
@@ -11,7 +11,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 const API1 = "https://api.spoonacular.com/recipes/complexSearch?" ;
 const API2 = "https://api.spoonacular.com/recipes/";
-const API2_1 = "/information?includeNutrition=true"
+const API2_1 = "/information?includeNutrition=true";
+const API_Random = "https://api.spoonacular.com/recipes/random?number=10"
 
 const config ={
     headers: {
@@ -31,6 +32,8 @@ app.get('/', (req,res)=>{
     res.render("index.ejs", {content: "kkkkkkkkkkkkkkkkkkkkkk"});
 
 } )
+
+
 
 
 let check = false;
